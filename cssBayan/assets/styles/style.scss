@@ -1,0 +1,172 @@
+@import url(nullstyle.css);
+
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter.ttf");
+}
+@font-face {
+	font-family: "Georgia";
+	src: url("../fonts/GeorgiaRegular.ttf");
+}
+
+.wrapper {
+	background: wheat;
+	padding: 20px;
+	margin: 0 auto;
+	max-width: 1720px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	padding: 10px 0 20px 20px;
+	font-family: "Inter";
+	font-size: 36px;
+	font-weight: 900;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+label {
+	border-top: 3px solid rgb(155, 155, 155);
+	display: flex;
+	flex-direction: column;
+	.subtitle {
+		padding: 10px 20px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 24px;
+		font-family: "Georgia";
+		font-weight: 600;
+		color: rgb(75, 53, 131);
+		transition-duration: 0.5s;
+	}
+	.image {
+		align-self: center;
+		width: 400px;
+		height: 0;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition-duration: 0.5s;
+	}
+	.image--img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+// ----- note-1 ----- //
+.wrapper:hover {
+	label {
+		.subtitle {
+			color: rgb(0, 0, 0);
+		}
+
+		.subtitle:after {
+			display: block;
+			content: "";
+			width: 24px;
+			height: 24px;
+			background: url(../images/shield_left.svg) 0 0 / contain no-repeat;
+			transition-duration: 0.5s;
+		}
+	}
+}
+
+// ----- note-2 ----- //
+label:hover {
+	cursor: pointer;
+	.subtitle:after {
+		transform: rotate(-90deg);
+	}
+
+	.image {
+		height: 400px;
+	}
+}
+
+// ----- note-3 ----- //
+
+input[type="checkbox"]:checked + label {
+	.subtitle {
+		color: rgb(0, 0, 0);
+	}
+	.subtitle:after {
+		display: block;
+		content: "";
+		width: 24px;
+		height: 24px;
+		background: url(../images/shield_left.svg) 0 0 / contain no-repeat;
+		transition-duration: 0.5s;
+		transform: rotate(-90deg);
+	}
+
+	.image {
+		height: 400px;
+	}
+}
+
+@media (max-width: 1180px) {
+	.title {
+		font-size: 32px;
+	}
+	label {
+		.subtitle {
+			font-size: 22px;
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	.wrapper {
+		min-width: 310px;
+	}
+
+	.title {
+		font-size: 28px;
+	}
+	label {
+		.subtitle {
+			font-size: 20px;
+		}
+		.image {
+			width: 300px;
+		}
+	}
+
+	label:hover {
+		cursor: pointer;
+		.subtitle:after {
+			transform: rotate(-90deg);
+		}
+
+		.image {
+			height: 300px;
+		}
+	}
+
+	input[type="checkbox"]:checked + label {
+		.subtitle {
+			color: rgb(0, 0, 0);
+		}
+		.subtitle:after {
+			display: block;
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url(../images/shield_left.svg) 0 0 / contain no-repeat;
+			transition-duration: 0.5s;
+			transform: rotate(-90deg);
+		}
+
+		.image {
+			height: 300px;
+		}
+	}
+}
