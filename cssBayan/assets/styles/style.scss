@@ -11,34 +11,34 @@
 
 .wrapper {
 	background: wheat;
-	padding: 20px;
+	padding: 1em;
 	margin: 0 auto;
-	max-width: 1720px;
+	max-width: 108em;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 }
 
 .title {
-	padding: 10px 0 20px 20px;
+	padding: 0.5em 0 1em 1em;
 	font-family: "Inter";
-	font-size: 36px;
+	font-size: 2.5em;
 	font-weight: 900;
 }
 
-input[type="checkbox"] {
-	display: none;
+input[type="radio"] {
+	filter: opacity(0);
 }
 
 label {
-	border-top: 3px solid rgb(155, 155, 155);
+	border-top: 0.2em solid rgb(155, 155, 155);
 	display: flex;
 	flex-direction: column;
 	.subtitle {
-		padding: 10px 20px;
+		padding: 0.5em 1.5em;
 		display: flex;
 		justify-content: space-between;
-		font-size: 24px;
+		font-size: 2em;
 		font-family: "Georgia";
 		font-weight: 600;
 		color: rgb(75, 53, 131);
@@ -46,9 +46,9 @@ label {
 	}
 	.image {
 		align-self: center;
-		width: 400px;
+		width: 30em;
 		height: 0;
-		padding: 20px;
+		padding: 1em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -71,8 +71,8 @@ label {
 		.subtitle:after {
 			display: block;
 			content: "";
-			width: 24px;
-			height: 24px;
+			width: 1em;
+			height: 1em;
 			background: url(../images/shield_left.svg) 0 0 / contain no-repeat;
 			transition-duration: 0.5s;
 		}
@@ -87,56 +87,56 @@ label:hover {
 	}
 
 	.image {
-		height: 400px;
+		height: 30em;
 	}
 }
 
 // ----- note-3 ----- //
 
-input[type="checkbox"]:checked + label {
+input[type="radio"]:checked + label {
 	.subtitle {
 		color: rgb(0, 0, 0);
 	}
 	.subtitle:after {
 		display: block;
 		content: "";
-		width: 24px;
-		height: 24px;
+		width: 1em;
+		height: 1em;
 		background: url(../images/shield_left.svg) 0 0 / contain no-repeat;
 		transition-duration: 0.5s;
 		transform: rotate(-90deg);
 	}
 
 	.image {
-		height: 400px;
+		height: 30em;
 	}
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 70em) {
 	.title {
-		font-size: 32px;
+		font-size: 2em;
 	}
 	label {
 		.subtitle {
-			font-size: 22px;
+			font-size: 1.6em;
 		}
 	}
 }
 
-@media (max-width: 570px) {
+@media (max-width: 35em) {
 	.wrapper {
-		min-width: 310px;
+		min-width: 20em;
 	}
 
 	.title {
-		font-size: 28px;
+		font-size: 1.8em;
 	}
 	label {
 		.subtitle {
-			font-size: 20px;
+			font-size: 1.4em;
 		}
 		.image {
-			width: 300px;
+			width: 20em;
 		}
 	}
 
@@ -147,26 +147,26 @@ input[type="checkbox"]:checked + label {
 		}
 
 		.image {
-			height: 300px;
+			height: 20em;
 		}
 	}
 
-	input[type="checkbox"]:checked + label {
+	input[type="radio"]:checked + label {
 		.subtitle {
 			color: rgb(0, 0, 0);
 		}
 		.subtitle:after {
 			display: block;
 			content: "";
-			width: 20px;
-			height: 20px;
+			width: 0.8em;
+			height: 0.8em;
 			background: url(../images/shield_left.svg) 0 0 / contain no-repeat;
 			transition-duration: 0.5s;
 			transform: rotate(-90deg);
 		}
 
 		.image {
-			height: 300px;
+			height: 20em;
 		}
 	}
 }
